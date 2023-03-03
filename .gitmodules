@@ -23,5 +23,5 @@
     branch = main
 [submodule "lib"]
 	path = lib
-	url = https://github.com/fieldsets/fieldsets-libs.git
+	url = https://github.com/fieldsets/fieldsets-lib.git
 	branch =  main
