@@ -1,0 +1,27 @@
+[submodule "config/local"]
+	path = config/local
+	url = git@github.com:fieldsets/fieldsets-local.git
+    branch = main
+[submodule "config/postgres"]
+	path = config/postgres
+	url = git@github.com:fieldsets/docker-postgres.git
+    branch = main
+[submodule "config/mail"]
+	path = config/mail
+	url = git@github.com:fieldsets/docker-mail.git
+    branch = main
+[submodule "config/redis"]
+	path = config/redis
+	url = git@github.com:fieldsets/docker-redis.git
+    branch = main
+[submodule "config/clickhouse"]
+	path = config/clickhouse
+	url = git@github.com:fieldsets/docker-clickhouse.git
+[submodule "config/fluent-bit"]
+	path = config/fluent-bit
+	url = git@github.com:fieldsets/docker-fluentbit.git
+    branch = main
+[submodule "lib"]
+	path = lib
+	url = git@github.com:fieldsets/fieldsets-lib.git
+	branch =  main

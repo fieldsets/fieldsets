@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  fieldsets-local:
+      environment:
+        SOURCE_SCHEMA: ${SOURCE_SCHEMA:-fieldsets}
+        TARGET_SCHEMA: ${TARGET_SCHEMA:-fieldsetsdb}
+        QUERY_SCHEMA: ${QUERY_SCHEMA:-public}
+        MIGRATE_DATA: ${MIGRATE_DATA:-false}
+      depends_on: 
+        - fieldsets-postgres
+      volumes:
+        - ./config/local/.bashrc:/root/.bashrc
+        - ./config/local/.bash_profile:/root/.profile
+        - ./.env:/root/.env
+
+  fieldsets-logger:
+      depends_on:
+        - fieldsets-local

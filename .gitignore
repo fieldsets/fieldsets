@@ -1,0 +1,27 @@
+.env
+*.env
+./docker-compose.override.yml
+.gitkeep
+
+#ignore most of what is in src
+src/*
+!src
+!src/README.md
+
+data/*
+!data
+!data/README.md
+
+plugins/*
+!plugins
+!plugins/README.md
+
+*.pem
+*_rsa
+id_rsa
+
+# Editor output
+.vscode/
+.editorconfig
+.DS_Store
+
