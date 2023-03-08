@@ -10,7 +10,7 @@ services:
                 POSTGRES_PORT: ${POSTGRES_PORT:-5432}
         container_name: fieldsets-local
         hostname: fieldsets-local
-        tty: ${ENABLE_TERMINAL:-false}
+        tty: ${ENABLE_TERMINAL:-true}
         networks:
             default:
                 ipv4_address: ${FIELDSETS_LOCAL_HOST:-172.28.0.6}
