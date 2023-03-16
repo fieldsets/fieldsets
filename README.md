@@ -55,17 +55,37 @@ Using the terminal execute the following steps
 
 ### Windows
 
-- Enable Linux Subsystem
-- Install git & git bash
+- Install windows terminal
+  - https://apps.microsoft.com/store/detail/windows-terminal/
+- Enable Windows Subsystem for Linux (WSL 2)
+  - See [image](/docs/assets/Turn-on-Windows-Subsystem-for-Linux.png)
+- Install Debian for WSL
+  - Open Windows PowerShell using above terminal
+  - Type command `wsl --install -d Debian`
+  - Set username to `fieldsets`
+  - Set password to `fieldsets`
+- Utlize external DNS (see https://github.com/epomatti/wsl2-dns-fix-config)
+  - `sudo bash`
+  - `cp ./config/wsl.conf /etc/wsl.conf`
+  - `cp ./config/resolv.conf /etc/resolv.conf`
+  - `chattr +i /etc/wsl.conf`
+- Restart WSL
+  - Open PowerShell Terminal
+  - `wsl.exe --shutdown`
+- Install Debian packages
+  - Open Debian Teminal
+  - `sudo apt update && sudo apt full-upgrade`
+  - `sudo apt install git`
 - Install docker desktop
+  - https://docker.com/products/docker-desktop/
 
 ## Install Steps
 
-Once you have installed git and docker, the first step is to clone the `fieldsets-local` repository and all of it's submodules into your local environment. Since we have no submodles to install, we can omit the `--recurse-submodules` parameters, but often projects have their own repositories. Installing them as a submodule is an option to decouple any applications, scrapers, metrics, etc. from our established data structures.
+Once you have installed git and docker, the first step is to clone the `fieldsets` repository and all of it's submodules into your local environment. Since we have no submodles to install, we can omit the `--recurse-submodules` parameters, but often projects have their own repositories. Installing them as a submodule is an option to decouple any applications, scrapers, metrics, etc. from our established data structures.
 
 ```
-git clone --recurse-submodules https://github.com/fieldsets/fieldsets-local.git
-cd fieldsets-local
+git clone --recurse-submodules https://github.com/fieldsets/fieldsets.git
+cd fieldsets
 cp ./env.example ./.env
 ```
 

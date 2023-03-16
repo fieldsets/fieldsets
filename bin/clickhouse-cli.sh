@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-#!/bin/bash
-set -e
-
 # Check if a local envfile exists and load.
 cd "${0%/*}";
 cd ../

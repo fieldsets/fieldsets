@@ -38,6 +38,11 @@ Using the terminal execute the following steps
 - Install git
     - `sudo apt install git`
 
+### Windows Install (wsl v2)
+- Install wsl v2
+- Install Docker Desktop
+- Set DNS using `./config/docker-daemon.json`
+
 ## Install Steps
 Once you have install git and docker-compose, the first step is to clone the `fieldsets-pipeline` repository and all of it's submodules into your local environment. This pipeline has 2 submodules minimally required to run. The [postgres database container](https://github.com/Fieldsets/docker-postgres) and a [localized scripting container](https://github.com/Fieldsets/fieldsets-local) that helps run whatever scripts are needed by the pipeline project. By default, this pipeline will run using all variables from all integrations that are active in production even if the containers are not running. Before getting started, it may be best to look in the [docker config sub-directory](./config/docker/) and utilize the dotenv, gitmodule & compose override files found there in place of the top level files used to run the pipeline in full.
 
