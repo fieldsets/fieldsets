@@ -15,8 +15,8 @@ Currently this environment is a work in progress focusing on aggregated metrics 
 *TL;DR*
 
 ```
-git clone --recurse-submodules https://github.com/fieldsets/fieldsets-local.git
-cd fieldsets-local
+git clone --recurse-submodules https://github.com/fieldsets/fieldsets.git
+cd fieldsets
 cp ./env.example ./.env (optional for customization)
 docker-compose up -d --build
 ```
