@@ -17,7 +17,8 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 | LOCAL_UID | `1000` | *any integer. Typically `1000` (linux) or `502` (mac)* | all | User id of host account. Use the command `id -u` to retrieve your user id. This allows you to write to containers w/o permission errors. |
 | LOCAL_GID | `1000` | *any integer. Typically `1000` (linux) or `20` (mac)* | all | Group id of host account. Use the command `id -g` to retrieve the group id.
 | TIMEZONE | `America/New_York` | *Any [valid timezone string](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)* | all | Timezone of the container host server |
-| FIELDSETS_LOCAL_NETWORK_SUBNET | `172.28.0.0/24` | *any valid ipv4 Class A range address* | all | The address range subnet which containers can communicate under |
+| FIELDSETS_NETWORK_SUBNET | `172.28.0.0/24` | *any valid ipv4 Class A range address* | all | The address range subnet which containers can communicate under |
+| FIELDSETS_SRC_PATH | `./src/` | *any relative path string* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Mounts this path to `/fieldsets` within container | love you daddy
 
 ## Multi-container Variables
 | **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
@@ -51,7 +52,7 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 ## Fieldsets Local Variables
 | **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
 | :----------- | :---------------- | :--------------- | :----------- | :-------------- |
-| FIELDSETS_LOCAL_SRC_PATH | `./src/` | *any relative path string* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Mounts this path to `/fieldsets` within container |
+| FIELDSETS_SRC_PATH | `./src/` | *any relative path string* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Mounts this path to `/fieldsets` within container |
 | FIELDSETS_LOCAL_CONFIG_PATH | `./config/local/` | *any relative path string*  | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Location of Dockerfile. |
 | FIELDSETS_LOCAL_HOST | `172.28.0.6` | *any valid ipv4 address* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Allows external containers to access this container vi local ip address. |
 | SSH_PORT | `22` | *any integer* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Port number of Fieldsets jump server |

@@ -1,0 +1,29 @@
+[
+{ 
+	"token": "users",
+  	"label": "Users",
+    "store": "filter",
+  	"fields": [
+        {
+            "token": "username",
+            "label": "User Name",
+            "type": "string",
+        },
+        {
+            "token": "firstname",
+            "label": "First Name",
+            "type": "string"
+        },
+        {
+            "token": "lastname",
+            "label": "Last Name",
+            "type": "string"
+        },
+        {
+            "token": "displayname",
+            "label": "Display Name",
+            "type": "string"
+        }
+    ]
+}
+]

@@ -78,6 +78,14 @@ Using the terminal execute the following steps
   - `sudo apt install git`
 - Install docker desktop
   - https://docker.com/products/docker-desktop/
+- Set daemon.json
+  - "dns": ["1.1.1.1"]
+- Add trusted crt to WSL
+  - Export trusted ca roots as DER from windows MMC cert manager
+  - In WSL debian terminal run 
+    - `openssl x509 -inform DER -in ./somefile.cer -out ./somefile.crt`
+https://stackoverflow.com/questions/72167566/wsl-docker-curl-60-ssl-certificate-problem-unable-to-get-local-issuer-certi
+
 
 ## Install Steps
 

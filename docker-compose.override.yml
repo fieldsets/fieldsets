@@ -8,6 +8,7 @@ services:
         MIGRATE_DATA: ${MIGRATE_DATA:-false}
       depends_on: 
         - fieldsets-postgres
+        - fieldsets-clickhouse
       volumes:
         - ./config/local/.bashrc:/root/.bashrc
         - ./config/local/.bash_profile:/root/.profile
