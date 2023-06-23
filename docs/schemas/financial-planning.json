@@ -1,20 +1,51 @@
 [
-    { 
+    {
+        "token": "household",
+        "label": "Household",
+        "fields": [
+            {
+                "token": "household_name",
+                "label": "Household Name",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "short_name",
+                "label": "Household Short Name",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "primary_contact",
+                "label": "Household Primary Contact",
+                "type": "fieldset",
+                "store": "filter"
+            }
+        ]
+    },
+    {
         "token": "account",
         "label": "Account",
+        "parent": "household",
         "fields": [
             {
                 "token": "account_name",
                 "label": "Account Name",
                 "type": "string",
                 "store": "filter"
+            },
+            {
+                "token": "account_type",
+                "label": "Account Name",
+                "type": "string",
+                "store": "filter"
             }
         ]
     },
-    {   
+    {
         "token": "client",
         "label": "Client",
-        "parent": "account",
+        "parent": "household",
         "fields": [
             {
                 "token": "firstname",
@@ -38,6 +69,12 @@
                 "token": "dob",
                 "label": "Birthdate",
                 "type": "date",
+                "store": "filter"
+            },
+            {
+                "token": "email",
+                "label": "Email Address",
+                "type": "string",
                 "store": "filter"
             }
         ]
@@ -88,19 +125,20 @@
     {
         "token": "portfolio",
         "label": "Portfolio",
+        "parent": "account",
         "fields": [
-            {
-                "token": "account",
-                "label": "Account ID",
-                "type": "fieldset",
-                "store": "vector"
-            },
             {
                 "token": "asset",
                 "label": "Asset ID",
                 "type": "fieldset",
-                "store": "vector"
+                "store": "filter"
             },
+            {
+                "token": "asset_qty",
+                "label": "Asset Quantity",
+                "type": "decimal",
+                "store": "record"
+            }
             {
                 "token": "asset_amount",
                 "label": "Asset Amount",
@@ -110,16 +148,10 @@
         ]
     },
     {
-        "token": "portfolio_members",
-        "label": "Portfolio Members",
-        "parent": "portfolio",
+        "token": "account_members",
+        "label": "Account Members",
+        "parent": "account",
         "fields": [
-            {
-                "token": "portfolio",
-                "label": "Portfolio ID",
-                "type": "fieldset",
-                "store": "filter"
-            },
             {
                 "token": "client",
                 "label": "Client ID",

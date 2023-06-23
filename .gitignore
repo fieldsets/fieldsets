@@ -20,8 +20,9 @@ plugins/*
 *_rsa
 id_rsa
 
+.log
+
 # Editor output
 .vscode/
 .editorconfig
 .DS_Store
-

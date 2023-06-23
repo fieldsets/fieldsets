@@ -1,0 +1,20 @@
+[
+    {
+        "token": "tags",
+        "label": "Tags",
+        "fields": [
+            {
+                "token": "tag_name",
+                "label": "Tag Name",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "tag_target",
+                "label": "Tag Target",
+                "type": "fieldset",
+                "store": "map"
+            }
+        ]
+    }
+]

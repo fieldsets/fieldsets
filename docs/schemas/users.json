@@ -1,5 +1,5 @@
 [
-{ 
+{
 	"token": "users",
   	"label": "Users",
     "store": "filter",
@@ -8,21 +8,31 @@
             "token": "username",
             "label": "User Name",
             "type": "string",
+            "store": "filter"
         },
         {
             "token": "firstname",
             "label": "First Name",
-            "type": "string"
+            "type": "string",
+            "store": "filter"
         },
         {
             "token": "lastname",
             "label": "Last Name",
-            "type": "string"
+            "type": "string",
+            "store": "filter"
         },
         {
             "token": "displayname",
             "label": "Display Name",
-            "type": "string"
+            "type": "string",
+            "store": "filter"
+        },
+        {
+            "token": "email",
+            "label": "Email Address",
+            "type": "string",
+            "store": "filter"
         }
     ]
 }
