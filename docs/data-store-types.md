@@ -30,6 +30,12 @@ Documents are semi-structured data stores that can be indexed. Currently stored 
 
 Messages are build for write performance with minimal indexing. Logs and messages are similar. Currently using Postgresql Unlogged tables with JSONB data types. TODO: Integrate Kafka and Clickhouse Log storage.
 
+### View
+Views are an assembly of previously defined data fields combined into single table like structure. These views are typically stored in memory. PostgreSQL materialized views are difficult to update when using larger data sets and joins, so Clickhouse Materialized views are used to deliver this useful store type.
+
+### Enum
+Enums are a set of named constants. Instead of stored as a table structure, these are created as a set of usable values for a given field via the PostgreSQL and Clickhouse `ENUM` data types.
+
 ### File
 
 Files are structured or unstructured files stored on the filesystem. Uses Clickhouse file table engine.
