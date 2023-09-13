@@ -16,6 +16,7 @@ plugins/*
 !plugins
 !plugins/README.md
 
+*.crt
 *.pem
 *_rsa
 id_rsa

@@ -82,7 +82,7 @@ Using the terminal execute the following steps
   - "dns": ["1.1.1.1"]
 - Add trusted crt to WSL
   - Export trusted ca roots as DER from windows MMC cert manager
-  - In WSL debian terminal run 
+  - In WSL debian terminal run
     - `openssl x509 -inform DER -in ./somefile.cer -out ./somefile.crt`
 https://stackoverflow.com/questions/72167566/wsl-docker-curl-60-ssl-certificate-problem-unable-to-get-local-issuer-certi
 
@@ -155,6 +155,14 @@ This would execute your init script you have clone into ./src and exit the conta
 
 ## Other Fieldsets Containers
 Currently this pipeline expects a PostgreSQL instance to be specified. If you want to run one locally, check out Fieldsets's [docker-postgres repository](https://github.com/Fieldsets/docker-postgres) to help you get one running. If you know for a fact you want a all in one environment, check out Fieldsets's full [pipeline repository](https://github.com/Fieldsets/fieldsets-pipeline) which automates running postgres and this repository into a single dotenv file and `docker compose up -d` command.
+
+# Install Phase
+
+## Build Phase
+
+## Init Phase
+
+## Run Phase
 
 ## Tools
 ### PostgreSQL
