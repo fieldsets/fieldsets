@@ -1,0 +1,9 @@
+include:
+  - path: ./fluent-bit/docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}fluent-bit/
+  - path: ./postgres/docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}postgres/
+  - path: ./clickhouse/docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}clickhouse/
+  - path: ./local/docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}local/

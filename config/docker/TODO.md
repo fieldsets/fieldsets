@@ -1,0 +1,6 @@
+- set imported environment variable compose file.
+  - https://docs.docker.com/compose/compose-file/10-fragments/
+- set deploy configs
+  - https://docs.docker.com/compose/compose-file/deploy/
+- set develop configs
+  - https://docs.docker.com/compose/compose-file/develop/
