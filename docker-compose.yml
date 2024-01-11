@@ -1,24 +1,15 @@
 version: '3.7'
-services:
-    fieldsets-local:
-        build:
-            context: ./
-            dockerfile: ${FIELDSETS_LOCAL_CONFIG_PATH:-./config/local/}Dockerfile
-            args:
-                TIMEZONE: ${TIMEZONE:-America/New_York}
-                POSTGRES_VERSION: ${POSTGRES_VERSION:-15}
-                POSTGRES_PORT: ${POSTGRES_PORT:-5432}
-        container_name: fieldsets-local
-        hostname: fieldsets-local
-        tty: ${ENABLE_TERMINAL:-true}
-        networks:
-            default:
-                ipv4_address: ${FIELDSETS_LOCAL_HOST:-172.28.0.6}
+include: 
+  - path: ./config/docker-compose.yml
+    project_directory: ./config/
+    env_file: ./.env
+  - path: ./plugins/docker-compose.yml
+    project_directory: ./plugins/
+    env_file: ./.env
 
 networks:
     default:
         driver: bridge
-        name: fieldsets_network
         attachable: true
         ipam:
             config:

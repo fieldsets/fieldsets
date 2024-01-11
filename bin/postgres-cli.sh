@@ -18,4 +18,4 @@ fi
 PGPASSWORD=${POSTGRES_PASSWORD}
 
 # This script provides you with the postgresql terminal client.
-docker exec -it fieldsets-postgres /bin/bash -c "export PGPASSWORD=${POSTGRES_PASSWORD}; psql --host ${POSTGRES_HOST} --username ${POSTGRES_USER} --port ${POSTGRES_PORT} --dbname ${POSTGRES_DB}"
+docker exec -it fieldsets-db /bin/bash -c "export PGPASSWORD=${POSTGRES_PASSWORD}; psql --host ${POSTGRES_HOST} --username ${POSTGRES_USER} --port ${POSTGRES_PORT} --dbname ${POSTGRES_DB}"
