@@ -10,7 +10,6 @@ include:
 networks:
     default:
         driver: bridge
-        name: fieldsets_network
         attachable: true
         ipam:
             config:
