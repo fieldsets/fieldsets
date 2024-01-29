@@ -1,0 +1,48 @@
+version: '3.7'
+volumes:
+    fieldsets-plugins:
+        driver: local
+        name: fieldsets-plugins
+        driver_opts:
+          type: 'none'
+          o: 'bind'
+          device: './plugins'
+    fieldsets-src:
+        driver: local
+        name: fieldsets-src
+        driver_opts:
+          type: 'none'
+          o: 'bind'
+          device: './src'
+    fieldsets-lib:
+        driver: local
+        name: fieldsets-lib
+        driver_opts:
+          type: 'none'
+          o: 'bind'
+          device: './lib'
+    fieldsets-data:
+        driver: local
+        name: fieldsets-data
+        driver_opts:
+          type: 'none'
+          o: 'bind'
+          device: './data'
+
+services:
+    fieldsets-store:
+        volumes:
+            - fieldsets-plugins:/fieldsets-plugins/
+            - fieldsets-data:/fieldsets-data/
+    fieldsets-db:
+        volumes:
+            - fieldsets-plugins:/fieldsets-plugins/
+            - fieldsets-data:/fieldsets-data/
+            - fieldsets-lib:/fieldsets-lib/
+            - fieldsets-src:/fieldsets/
+    fieldsets-local:
+        volumes:
+            - fieldsets-plugins:/fieldsets-plugins/
+            - fieldsets-data:/fieldsets-data/
+            - fieldsets-lib:/fieldsets-lib/
+            - fieldsets-src:/fieldsets/

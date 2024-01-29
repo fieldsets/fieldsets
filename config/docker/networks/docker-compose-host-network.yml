@@ -1,0 +1,44 @@
+networks:
+    host:
+        driver: host
+        external: true
+
+services:
+    fieldsets-logger:
+      network_mode: host
+
+    fieldsets-db:
+      environment:
+        FIELDSETS_LOCAL_HOST: ${FIELDSETS_LOCAL_HOST:-0.0.0.0}
+      network_mode: host
+      logging:
+        driver: fluentd
+        options:
+          fluentd-address: ${LOGGER_HOST:-0.0.0.0}:${LOGGER_PORT:-24224}
+          tag: debug_log.postgres
+          fluentd-async: "true"
+          env: "PGOPTIONS='-c search_path=pipeline',LOGGING_ENABLED='${LOGGING_ENABLED:-false}'"
+
+    fieldsets-store:
+      network_mode: host
+      logging:
+        driver: fluentd
+        options:
+          fluentd-address: ${LOGGER_HOST:-0.0.0.0}:${LOGGER_PORT:-24224}
+          tag: debug_log.clickhouse
+          fluentd-async: "true"
+          env: "PGOPTIONS='-c search_path=pipeline',LOGGING_ENABLED='${LOGGING_ENABLED:-false}'"
+
+    fieldsets-local:
+      volumes:
+        - ${FIELDSETS_CONFIG_PATH:-./config/}local/.bashrc:/root/.bashrc
+        - ${FIELDSETS_CONFIG_PATH:-./config/}local/.bash_profile:/root/.profile
+        - ./.env:/root/.env
+      network_mode: host
+      logging:
+        driver: fluentd
+        options:
+          fluentd-address: ${LOGGER_HOST:-0.0.0.0}:${LOGGER_PORT:-24224}
+          tag: debug_log.local
+          fluentd-async: "true"
+          env: "PGOPTIONS='-c search_path=pipeline',LOGGING_ENABLED='${LOGGING_ENABLED:-false}'"

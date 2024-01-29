@@ -30,7 +30,7 @@ traperr() {
 ##
 run() {
     # This script provides you with the the cli terminal client
-    docker exec -it "${server}" /bin/sh -c 'if [ -f /bin/bash ];then /bin/bash;else /bin/sh;fi'
+    docker exec -it "${server:-fieldsets-local}" /bin/sh -c 'if [ -f /bin/bash ];then /bin/bash;else /bin/sh;fi'
 }
 
 #===

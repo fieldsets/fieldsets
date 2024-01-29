@@ -1,18 +1,6 @@
 version: '3.7'
-include: 
-  - path: ./config/docker-compose.yml
-    project_directory: ./config/
-    env_file: ./.env
-  - path: ./plugins/docker-compose.yml
-    project_directory: ./plugins/
-    env_file: ./.env
 
-networks:
-    default:
-        driver: bridge
-        attachable: true
-        ipam:
-            config:
-            - subnet: ${FIELDSETS_NETWORK_SUBNET:-172.28.0.0/24}
-
-    
+include:
+  - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}
+    env_file: ./.env
