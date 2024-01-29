@@ -57,4 +57,4 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 | FIELDSETS_LOCAL_HOST | `172.28.0.6` | *any valid ipv4 address* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Allows external containers to access this container vi local ip address. |
 | SSH_PORT | `22` | *any integer* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Port number of Fieldsets jump server |
 | SSH_USER | `NULL` | *any string* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Username for Fieldsets jump server login |
-| SSH_KEY_PATH | `~/.ssh/id_rsa` | *any valid file path* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | RSA key file path |
+| SSH_KEY_PATH | `~/.ssh/` | *any valid file path* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | RSA key file path |
