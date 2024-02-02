@@ -158,9 +158,9 @@ Currently this pipeline expects a PostgreSQL instance to be specified. If you wa
 
 # Install Phase
 
-## Build Phase
-
 ## Init Phase
+
+## Config Phase
 
 ## Run Phase
 

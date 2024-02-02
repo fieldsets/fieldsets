@@ -6,9 +6,8 @@ If you want to use a specialized set of plugins for a container in the Fieldsets
 
 
 ## Plugin Event Phases
-There are 2 plugin events; the `build_plugins` and `init_plugins` events.
+There are 3 plugin events;
 
-- `build` is called during the docker build stage as a RUN command in a docker filer. This allows plugins to modify containers themselves in their own layer and allows you to build your own custom image using plugins.
-- `init` is run after all the containers have finished building, but before framework init scripts are fired. This event only happens the first time containers are started.
+- `init` is run after all the containers have finished building, but before framework init scripts are fired. This event only happens the first time containers are started immediately after docker finished building.
 - `config` is run after the init phase and is run on every startup.
 - `run` This phase happens after all init scripts have run and is run on every container startup.
