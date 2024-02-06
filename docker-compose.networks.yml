@@ -4,3 +4,6 @@ include:
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker/networks/docker-compose-${DOCKER_NETWORK_TYPE:-bridge}-network.yml
     project_directory: ./
     env_file: ./.env
+  - path: ${FIELDSETS_PLUGIN_PATH:-./plugins/}docker-compose.networks.yml
+    project_directory: ./
+    env_file: ./.env

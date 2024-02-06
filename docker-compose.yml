@@ -4,3 +4,6 @@ include:
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker-compose.yml
     project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}
     env_file: ./.env
+  - path: ${FIELDSETS_PLUGINS_PATH:-./plugins/}docker-compose.yml
+    project_directory: ${FIELDSETS_PLUGINS_PATH:-./plugins/}
+    env_file: ./.env
