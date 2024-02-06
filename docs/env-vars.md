@@ -30,7 +30,7 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 | POSTGRES_PORT | `5432` | *any integer* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | PostgreSQL port for connection |
 | POSTGRES_DB | `fieldsets` | *any string* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | PostgreSQL database name |
 | ENABLE_TERMINAL | `false` | `true` or `false` | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li></ul> | Sets variable withing docker compose file `tty: ${ENABLE_TERMINAL}`. Allows for pseudo tty. |
-| SSH_HOST | `NULL` | *any valid ipv4 address or DNS host string* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | If running environment locally, SSH_HOST creates a tunnel for FDWs |
+
 
 ## Postgres Container Variables
 | **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
