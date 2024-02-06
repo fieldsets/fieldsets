@@ -14,6 +14,7 @@ data/*
 
 plugins/*
 !plugins
+!plugins/docker-compose*.yml
 !plugins/README.md
 
 *.crt

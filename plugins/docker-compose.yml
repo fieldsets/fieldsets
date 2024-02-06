@@ -1,0 +1,9 @@
+version: '3.7'
+
+include:
+  - path: ./cache-plugin-redis/docker-compose.yml
+    project_directory: ${FIELDSETS_PLUGIN_PATH:-./plugins/}cache-plugin-redis/
+  - path: ./dashboard-plugin-redash/docker-compose.yml
+    project_directory: ${FIELDSETS_PLUGIN_PATH:-./plugins/}dashboard-plugin-redash/
+
+
