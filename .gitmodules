@@ -4,15 +4,15 @@
 	branch = main
 [submodule "config/postgres"]
 	path = config/postgres
-	url = https://github.com/fieldsets/docker-postgres.git
+	url = https://github.com/fieldsets/fieldsets-db-postgres.git
 	branch = main
 [submodule "config/clickhouse"]
 	path = config/clickhouse
-	url = https://github.com/fieldsets/docker-clickhouse.git
+	url = https://github.com/fieldsets/fieldsets-store-clickhouse.git
 	branch = main
 [submodule "config/fluent-bit"]
 	path = config/fluent-bit
-	url = https://github.com/fieldsets/docker-fluentbit.git
+	url = https://github.com/fieldsets/fieldsets-logger-fluentbit.git
 	branch = main
 [submodule "lib"]
 	path = lib
