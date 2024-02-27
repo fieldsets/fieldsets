@@ -2,8 +2,8 @@ version: '3.7'
 
 include:
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker/networks/docker-compose-${DOCKER_NETWORK_TYPE:-bridge}-network.yml
-    project_directory: ./
-    env_file: ./.env
+    project_directory: ${FIELDSETS_PATH:-./}
+    env_file: ${FIELDSETS_PATH:-./}.env
   - path: ${FIELDSETS_PLUGIN_PATH:-./plugins/}docker-compose.networks.yml
-    project_directory: ./
-    env_file: ./.env
+    project_directory: ${FIELDSETS_PATH:-./}
+    env_file: ${FIELDSETS_PATH:-./}.env

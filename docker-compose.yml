@@ -2,8 +2,8 @@ version: '3.7'
 
 include:
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker-compose.yml
-    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}
-    env_file: ./.env
+    project_directory: ${FIELDSETS_PATH:-./}
+    env_file: ${FIELDSETS_PATH:-./}.env
   - path: ${FIELDSETS_PLUGINS_PATH:-./plugins/}docker-compose.yml
-    project_directory: ${FIELDSETS_PLUGINS_PATH:-./plugins/}
-    env_file: ./.env
+    project_directory: ${FIELDSETS_PATH:-./}
+    env_file: ${FIELDSETS_PATH:-./}.env
