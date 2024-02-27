@@ -1,39 +1,56 @@
 [
-{
-	"token": "users",
-  	"label": "Users",
-    "store": "filter",
-  	"fields": [
-        {
-            "token": "username",
-            "label": "User Name",
-            "type": "string",
-            "store": "filter"
-        },
-        {
-            "token": "firstname",
-            "label": "First Name",
-            "type": "string",
-            "store": "filter"
-        },
-        {
-            "token": "lastname",
-            "label": "Last Name",
-            "type": "string",
-            "store": "filter"
-        },
-        {
-            "token": "displayname",
-            "label": "Display Name",
-            "type": "string",
-            "store": "filter"
-        },
-        {
-            "token": "email",
-            "label": "Email Address",
-            "type": "string",
-            "store": "filter"
-        }
-    ]
-}
+    {
+        "token": "users",
+        "label": "Users",
+        "store": "filter",
+        "fields": [
+            {
+                "token": "username",
+                "label": "User Name",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "user_type",
+                "label": "User Type",
+                "store": "enum",
+                "values": [
+                    "admin",
+                    "write",
+                    "read",
+                    "guest"
+                ]
+            },
+            {
+                "token": "firstname",
+                "label": "First Name",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "lastname",
+                "label": "Last Name",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "displayname",
+                "label": "Display Name",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "email",
+                "label": "Email Address",
+                "type": "string",
+                "store": "filter"
+            },
+            {
+                "token": "meta_data",
+                "label": "Meta Data",
+                "type": "document",
+                "store": "filter"
+            }
+        ]
+    }
 ]

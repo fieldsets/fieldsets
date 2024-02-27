@@ -12,14 +12,33 @@
             {
                 "token": "note_type",
                 "label": "Note Type",
-                "type": "string",
-                "store": "map"
+                "type": "enum",
+                "values": [
+                    "text",
+                    "json",
+                    "custom"
+                ]
             },
             {
-                "token": "owner",
-                "label": "Owner",
+                "token": "association_reference",
+                "label": "Association Reference",
+                "parent": "associations",
                 "type": "fieldset",
-                "store": "filter"
+                "store": "lookup"
+            },
+            {
+                "token": "member_reference",
+                "label": "Member Reference",
+                "parent": "members",
+                "type": "fieldset",
+                "store": "lookup"
+            },
+            {
+                "token": "user_reference",
+                "label": "User Owner",
+                "parent": "users",
+                "type": "fieldset",
+                "store": "lookup"
             }
         ]
     }
