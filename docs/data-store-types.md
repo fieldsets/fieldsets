@@ -18,9 +18,9 @@ Records operate as time series data stores. Currently using Clickhouse MergeTree
 
 Sequences are stored using positional data. Currently using Clickhouse MergeTree Table Engines.
 
-### Vector
+### Lookup
 
-Vector tables are 1 to 1 relationship or mapping tables. Currently stored using Clickhouse Merge Tree Tables.
+Lookup tables are 1 to 1 relationship or lookup tables. Currently stored using Clickhouse Merge Tree Tables.
 
 ### Document
 
