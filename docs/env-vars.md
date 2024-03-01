@@ -40,7 +40,7 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 ## ClickHouse Variables
 | **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
 | :----------- | :---------------- | :--------------- | :----------- | :-------------- |
-| CLICKHOUSE_ENABLED | `false` | Disabled by default. | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Enable to use column store data tables |
+| ENABLE_STORE | `false` | Disabled by default. | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Enable to use column store data tables |
 | CLICKOUSE_VERSION | `22` | *any valid major version number* | none | Clickhouse major release version |
 | CLICKHOUSE_CONFIG_PATH | `./config/clickhouse/` | *any valid path* | none | | Location of Dockerfile. |
 | CLICKHOUSE_USER | `default` | *any string* | none | ClickHouse DB username |

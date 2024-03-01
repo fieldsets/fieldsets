@@ -24,7 +24,7 @@ services:
           fluentd-address: ${LOGGER_HOST:-172.28.0.2}:${LOGGER_PORT:-24224}
           tag: debug_log.postgres
           fluentd-async: "true"
-          env: "PGOPTIONS='-c search_path=pipeline',LOGGING_ENABLED='${LOGGING_ENABLED:-false}'"
+          env: "PGOPTIONS='-c search_path=pipeline',ENABLE_LOGGING='${ENABLE_LOGGING:-false}'"
 
     fieldsets-local:
       volumes:
@@ -40,7 +40,7 @@ services:
           fluentd-address: ${LOGGER_HOST:-172.28.0.2}:${LOGGER_PORT:-24224}
           tag: debug_log.local
           fluentd-async: "true"
-          env: "PGOPTIONS='-c search_path=pipeline',LOGGING_ENABLED='${LOGGING_ENABLED:-false}'"
+          env: "PGOPTIONS='-c search_path=pipeline',ENABLE_LOGGING='${ENABLE_LOGGING:-false}'"
 
     fieldsets-store:
       networks:
@@ -52,5 +52,5 @@ services:
           fluentd-address: ${LOGGER_HOST:-172.28.0.2}:${LOGGER_PORT:-24224}
           tag: debug_log.clickhouse
           fluentd-async: "true"
-          env: "PGOPTIONS='-c search_path=pipeline',LOGGING_ENABLED='${LOGGING_ENABLED:-false}'"
+          env: "PGOPTIONS='-c search_path=pipeline',ENABLE_LOGGING='${ENABLE_LOGGING:-false}'"
 
