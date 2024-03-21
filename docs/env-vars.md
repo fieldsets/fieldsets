@@ -23,7 +23,7 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 ## Multi-container Variables
 | **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
 | :----------- | :---------------- | :--------------- | :----------- | :-------------- |
-| POSTGRES_VERSION | `14` | *any valid major version number* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | PostgreSQL Major Release Version. |
+| POSTGRES_VERSION | `15` | *any valid major version number* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | PostgreSQL Major Release Version. |
 | POSTGRES_USER | `postgres` | *any string* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | PostgreSQL DB username |
 | POSTGRES_PASSWORD | `fieldsets` | *any string* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | PostgreSQL DB user password |
 | POSTGRES_HOST | `172.28.0.7` | *any valid ipv4 address or DNS host string* | <ul><li>[fieldsets-local](https://github.com/Fieldsets/fieldsets-local)</li><li>[docker-postgres](https://github.com/Fieldsets/docker-postgres)</li></ul> | Address of PostgreSQL host. May be external or containerized address. |
