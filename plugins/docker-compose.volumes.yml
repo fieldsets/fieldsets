@@ -1,0 +1,3 @@
+include:
+  - path: ${FIELDSETS_PLUGINS_PATH:-./plugins/}cache-plugin-redis/config/docker/docker-compose.volumes.yml
+    project_directory: ${FIELDSETS_PLUGINS_PATH:-./plugins/}cache-plugin-redis/

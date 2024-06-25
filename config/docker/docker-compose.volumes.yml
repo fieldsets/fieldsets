@@ -1,0 +1,17 @@
+services:
+    fieldsets-store:
+        volumes:
+            - fieldsets-plugins:/fieldsets-plugins/
+            - fieldsets-data:/fieldsets-data/
+    fieldsets-db:
+        volumes:
+            - fieldsets-plugins:/fieldsets-plugins/
+            - fieldsets-data:/fieldsets-data/
+            - fieldsets-lib:/fieldsets-lib/
+            - fieldsets-src:/fieldsets/
+    fieldsets-local:
+        volumes:
+            - fieldsets-plugins:/fieldsets-plugins/
+            - fieldsets-data:/fieldsets-data/
+            - fieldsets-lib:/fieldsets-lib/
+            - fieldsets-src:/fieldsets/

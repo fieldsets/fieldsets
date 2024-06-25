@@ -29,20 +29,10 @@ volumes:
           o: 'bind'
           device: './data'
 
-services:
-    fieldsets-store:
-        volumes:
-            - fieldsets-plugins:/fieldsets-plugins/
-            - fieldsets-data:/fieldsets-data/
-    fieldsets-db:
-        volumes:
-            - fieldsets-plugins:/fieldsets-plugins/
-            - fieldsets-data:/fieldsets-data/
-            - fieldsets-lib:/fieldsets-lib/
-            - fieldsets-src:/fieldsets/
-    fieldsets-local:
-        volumes:
-            - fieldsets-plugins:/fieldsets-plugins/
-            - fieldsets-data:/fieldsets-data/
-            - fieldsets-lib:/fieldsets-lib/
-            - fieldsets-src:/fieldsets/
+include:
+  - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker/docker-compose.volumes.yml
+    project_directory: ${FIELDSETS_PATH:-./}
+    env_file: ${FIELDSETS_PATH:-./}.env
+  - path: ${FIELDSETS_PLUGINS_PATH:-./plugins/}docker-compose.volumes.yml
+    project_directory: ${FIELDSETS_PATH:-./}
+    env_file: ${FIELDSETS_PATH:-./}.env
