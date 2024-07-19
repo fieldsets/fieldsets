@@ -7,9 +7,9 @@ volumes:
           type: 'none'
           o: 'bind'
           device: './plugins'
-    fieldsets-src:
+    fieldsets-apps:
         driver: local
-        name: fieldsets-src
+        name: fieldsets-apps
         driver_opts:
           type: 'none'
           o: 'bind'
