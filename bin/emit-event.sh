@@ -39,7 +39,7 @@ run() {
         metadata_json="${metadata}"
     fi
 
-    docker exec fieldsets-local /fieldsets-bin/emit-event.sh "${event_name}" "${pipeline_name}" "${status}" "${metadata_json}"
+    docker exec fieldsets-local /usr/local/fieldsets/bin/emit-event.sh "${event_name}" "${pipeline_name}" "${status}" "${metadata_json}"
 }
 
 #===

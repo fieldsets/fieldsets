@@ -1,0 +1,17 @@
+services:
+    fieldsets-store:
+        volumes:
+            - fieldsets-plugins:/usr/local/fieldsets/plugins/
+            - fieldsets-data:/usr/local/fieldsets/data/
+    fieldsets-db:
+        volumes:
+            - fieldsets-plugins:/usr/local/fieldsets/plugins/
+            - fieldsets-data:/usr/local/fieldsets/data/
+            - fieldsets-lib:/usr/local/fieldsets/lib/
+            - fieldsets-apps:/usr/local/fieldsets/apps/
+    fieldsets-local:
+        volumes:
+            - fieldsets-plugins:/usr/local/fieldsets/plugins/
+            - fieldsets-data:/usr/local/fieldsets/data/
+            - fieldsets-lib:/usr/local/fieldsets/lib/
+            - fieldsets-apps:/usr/local/fieldsets/apps/
