@@ -1,5 +1,3 @@
-version: '3.7'
-
 include:
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker-compose.yml
     project_directory: ${FIELDSETS_PATH:-./}
