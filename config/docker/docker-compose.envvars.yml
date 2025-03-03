@@ -1,0 +1,10 @@
+services:
+    fieldsets-store:
+        environment:
+            VERSION: ${VERSION:-latest}
+    fieldsets-db:
+        environment:
+            VERSION: ${VERSION:-latest}
+    fieldsets-local:
+        environment:
+            VERSION: ${VERSION:-latest}
