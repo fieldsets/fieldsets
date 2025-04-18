@@ -1,6 +1,5 @@
 .env
 *.env
-./docker-compose.override.yml
 .gitkeep
 
 #ignore most of what is in src
@@ -16,6 +15,8 @@ plugins/*
 !plugins
 !plugins/docker-compose*.yml
 !plugins/README.md
+
+docker-compose.override*.yml
 
 *.crt
 *.pem

@@ -18,3 +18,7 @@
 	path = lib
 	url = https://github.com/fieldsets/fieldsets-lib.git
 	branch =  main
+[submodule "plugins/cache-plugin-redis"]
+	path = plugins/cache-plugin-redis
+	url = https://github.com/fieldsets/plugins/cache-plugin-redis.git
+	branch =  main
