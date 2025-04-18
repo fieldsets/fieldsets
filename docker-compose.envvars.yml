@@ -1,5 +1,3 @@
-version: '3.7'
-
 include:
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker/docker-compose.envvars.yml
     project_directory: ${FIELDSETS_PATH:-./}

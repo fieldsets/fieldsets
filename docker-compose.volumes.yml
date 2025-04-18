@@ -1,4 +1,3 @@
-version: '3.7'
 volumes:
     fieldsets-plugins:
         driver: local
@@ -34,5 +33,8 @@ include:
     project_directory: ${FIELDSETS_PATH:-./}
     env_file: ${FIELDSETS_PATH:-./}.env
   - path: ${FIELDSETS_PLUGINS_PATH:-./plugins/}docker-compose.volumes.yml
+    project_directory: ${FIELDSETS_PATH:-./}
+    env_file: ${FIELDSETS_PATH:-./}.env
+  - path: ${FIELDSETS_SRC_PATH:-./src/}fieldsets-docs/docker-compose.volumes.yml
     project_directory: ${FIELDSETS_PATH:-./}
     env_file: ${FIELDSETS_PATH:-./}.env
