@@ -27,14 +27,11 @@ volumes:
           type: 'none'
           o: 'bind'
           device: './data'
-
+    
 include:
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}docker/docker-compose.volumes.yml
     project_directory: ${FIELDSETS_PATH:-./}
     env_file: ${FIELDSETS_PATH:-./}.env
   - path: ${FIELDSETS_PLUGINS_PATH:-./plugins/}docker-compose.volumes.yml
-    project_directory: ${FIELDSETS_PATH:-./}
-    env_file: ${FIELDSETS_PATH:-./}.env
-  - path: ${FIELDSETS_SRC_PATH:-./src/}fieldsets-docs/docker-compose.volumes.yml
     project_directory: ${FIELDSETS_PATH:-./}
     env_file: ${FIELDSETS_PATH:-./}.env
