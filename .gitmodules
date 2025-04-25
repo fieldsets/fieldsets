@@ -1,24 +1,24 @@
-[submodule "config/local"]
+[submodule "fieldsets-local"]
 	path = config/local
 	url = https://github.com/fieldsets/fieldsets-local.git
 	branch = main
-[submodule "config/postgres"]
-	path = config/postgres
+[submodule "fieldsets-db"]
+	path = config/db
 	url = https://github.com/fieldsets/fieldsets-db-postgres.git
 	branch = main
-[submodule "config/clickhouse"]
-	path = config/clickhouse
+[submodule "fieldsets-store"]
+	path = config/store
 	url = https://github.com/fieldsets/fieldsets-store-clickhouse.git
 	branch = main
-[submodule "config/fluent-bit"]
-	path = config/fluent-bit
+[submodule "fieldsets-logger"]
+	path = config/logger
 	url = https://github.com/fieldsets/fieldsets-logger-fluentbit.git
 	branch = main
 [submodule "lib"]
 	path = lib
 	url = https://github.com/fieldsets/fieldsets-lib.git
 	branch =  main
-[submodule "plugins/cache-plugin-redis"]
+[submodule "fieldsets-cache"]
 	path = plugins/cache-plugin-redis
 	url = https://github.com/fieldsets/plugins/cache-plugin-redis.git
 	branch =  main

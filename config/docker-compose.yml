@@ -1,9 +1,9 @@
 include:
-  - path: ${FIELDSETS_CONFIG_PATH:-./config/}fluent-bit/docker-compose.yml
-    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}fluent-bit/
-  - path: ${FIELDSETS_CONFIG_PATH:-./config/}postgres/docker-compose.yml
-    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}postgres/
-  - path: ${FIELDSETS_CONFIG_PATH:-./config/}clickhouse/docker-compose.yml
-    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}clickhouse/
+  - path: ${FIELDSETS_CONFIG_PATH:-./config/}logger/docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}logger/
+  - path: ${FIELDSETS_CONFIG_PATH:-./config/}db/docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}db/
+  - path: ${FIELDSETS_CONFIG_PATH:-./config/}store/docker-compose.yml
+    project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}store/
   - path: ${FIELDSETS_CONFIG_PATH:-./config/}local/docker-compose.yml
     project_directory: ${FIELDSETS_CONFIG_PATH:-./config/}local/

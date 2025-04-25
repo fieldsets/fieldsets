@@ -15,7 +15,7 @@ services:
         driver: fluentd
         options:
           fluentd-address: ${LOGGER_HOST:-0.0.0.0}:${LOGGER_PORT:-24224}
-          tag: debug_log.postgres
+          tag: debug_log.db
           fluentd-async: "true"
           env: "PGOPTIONS='-c search_path=pipeline',ENABLE_LOGGING='${ENABLE_LOGGING:-false}'"
 
@@ -25,7 +25,7 @@ services:
         driver: fluentd
         options:
           fluentd-address: ${LOGGER_HOST:-0.0.0.0}:${LOGGER_PORT:-24224}
-          tag: debug_log.clickhouse
+          tag: debug_log.store
           fluentd-async: "true"
           env: "PGOPTIONS='-c search_path=pipeline',ENABLE_LOGGING='${ENABLE_LOGGING:-false}'"
 

@@ -40,7 +40,6 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 ## ClickHouse Variables
 | **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
 | :----------- | :---------------- | :--------------- | :----------- | :-------------- |
-| ENABLE_STORE | `false` | Disabled by default. | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Enable to use column store data tables |
 | CLICKHOUSE_VERSION | `24` | *any valid major version number* | none | Clickhouse major release version |
 | CLICKHOUSE_CONFIG_PATH | `./config/clickhouse/` | *any valid path* | none | | Location of Dockerfile. |
 | CLICKHOUSE_USER | `default` | *any string* | none | ClickHouse DB username |
@@ -55,6 +54,6 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 | FIELDSETS_SRC_PATH | `./src/` | *any relative path string* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Mounts this path to `/fieldsets` within container |
 | FIELDSETS_LOCAL_CONFIG_PATH | `./config/local/` | *any relative path string*  | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Location of Dockerfile. |
 | FIELDSETS_LOCAL_HOST | `172.28.0.6` | *any valid ipv4 address* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Allows external containers to access this container vi local ip address. |
-| SSH_PORT | `22` | *any integer* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Port number of Fieldsets jump server |
+| SSH_PORT | `1022` | *any integer* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Port number of Fieldsets jump server |
 | SSH_USER | `NULL` | *any string* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | Username for Fieldsets jump server login |
 | SSH_KEY_PATH | `~/.ssh/` | *any valid file path* | [fieldsets-local](https://github.com/Fieldsets/fieldsets-local) | RSA key file path |
