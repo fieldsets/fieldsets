@@ -6,7 +6,7 @@ Set JSON Object:
     "token": String,
     "label": String,
     "parent": String, #Existing Set Token String (optional)
-    "metadata": JSON #(optional)
+    "meta_data": JSON #(optional)
 }
 ```
 
@@ -20,7 +20,7 @@ Field JSON Object
     "values": [Any], #Used for definition of enum type. If enum is declared and values are not defined here, the enum will be caclulated after schmea definition (optional)
     "value": Any, #Default value (optional)
     "store": StoreType,
-    "metadata": JSON #(optional)
+    "meta_data": JSON #(optional)
 }
 ```
 
@@ -31,7 +31,7 @@ FieldSet JSON Object
     "token": String,
     "label": String,
     "parent": String, #Existing Set Token String (optional)
-    "metadata": JSON #(optional)
+    "meta_data": JSON #(optional)
     "fields": [
         # List of Field Objects
         {
@@ -42,7 +42,7 @@ FieldSet JSON Object
             "values": [Any], #Used for definition of enum type. If enum is declared and values are not defined here, the enum will be caclulated after schmea definition (optional)
             "value": Any, #Default value (optional)
             "store": StoreType,
-            "metadata": JSON #(optional)
+            "meta_data": JSON #(optional)
         }
     ]
 }
