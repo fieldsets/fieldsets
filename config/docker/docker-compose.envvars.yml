@@ -1,11 +1,10 @@
-x-envars: &envvars
+x-envvars: &envvars
   ENVIRONMENT: ${ENVIRONMENT:-dev-local}
   FIELDSETS_INFRASTRUCTURE_ROLE: ${FIELDSETS_INFRASTRUCTURE_ROLE:-node}
-  FIELDSETS_DB: ${FIELDSETS_DB:-postgres}
-  FIELDSETS_STORE: ${FIELDSETS_STORE:-clickhouse}
   PLUGINS_PATH: "/usr/local/fieldsets/plugins/"
   LIB_PATH: "/usr/local/fieldsets/lib/"
   APPS_PATH: "/usr/local/fieldsets/apps/"
   DATA_PATH: "/usr/local/fieldsets/data/"
   ENABLE_DEBUG_MODE: ${ENABLE_DEBUG_MODE:-false}
   ENABLE_LOGGING: ${ENABLE_LOGGING:-false}
+  FIELDSETS_LOCAL_HOST: ${FIELDSETS_LOCAL_HOST:-172.28.0.6}}
