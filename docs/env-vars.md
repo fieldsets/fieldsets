@@ -38,15 +38,15 @@ The table below lists all the variables utilized within Fieldsets's data pipelin
 | POSTGRES_CONFIG_PATH | `./config/postgres/` | *any valid path* | [docker-postgres](https://github.com/Fieldsets/docker-postgres) | Location of Dockerfile. |
 
 ## ClickHouse Variables
-| **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
-| :----------- | :---------------- | :--------------- | :----------- | :-------------- |
-| CLICKHOUSE_VERSION | `24` | *any valid major version number* | none | Clickhouse major release version |
+| **Variable**           | **Default Value** | **Valid Values** | **Projects** | **Description** |
+| :--------------------- | :---------------- | :--------------- | :----------- | :-------------- |
+| CLICKHOUSE_VERSION     | `24`              | *any valid major version number* | none | Clickhouse major release version |
 | CLICKHOUSE_CONFIG_PATH | `./config/clickhouse/` | *any valid path* | none | | Location of Dockerfile. |
-| CLICKHOUSE_USER | `default` | *any string* | none | ClickHouse DB username |
-| CLICKHOUSE_PASSWORD | `fieldsets` | *any string* | none | ClickHouse DB user password |
-| CLICKHOUSE_HOST | `172.28.0.5` | *any valid ipv4 address or DNS host string* | none | Address of ClickHouse host. May be external or containerized address.
-| CLICKHOUSE_PORT | `8123` |  *any integer* | none | ClickHouse port for connection |
-| CLICKHOUSE_DB | `fieldsets` | *any string* | none | ClickHouse DB name |
+| CLICKHOUSE_USER        | `default` | *any string* | none | ClickHouse DB username |
+| CLICKHOUSE_PASSWORD    | `fieldsets` | *any string* | none | ClickHouse DB user password |
+| CLICKHOUSE_HOST        | `172.28.0.5` | *any valid ipv4 address or DNS host string* | none | Address of ClickHouse host. May be external or containerized address.
+| CLICKHOUSE_PORT        | `8123` |  *any integer* | none | ClickHouse port for connection |
+| CLICKHOUSE_DB          | `fieldsets` | *any string* | none | ClickHouse DB name |
 
 ## Fieldsets Local Variables
 | **Variable** | **Default Value** | **Valid Values** | **Projects** | **Description** |
