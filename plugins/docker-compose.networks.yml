@@ -1,3 +1,2 @@
-include:
-  - path: ${FIELDSETS_PLUGIN_PATH:-./plugins/}cache-plugin-redis/config/docker/networks/docker-compose-${DOCKER_NETWORK_TYPE:-bridge}-network.yml
-    project_directory: ${FIELDSETS_PLUGIN_PATH:-./plugins/}cache-plugin-redis/
+version: "3.8"
+
